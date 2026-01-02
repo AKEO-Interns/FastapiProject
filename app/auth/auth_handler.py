@@ -50,5 +50,10 @@ def get_current_user(
     except JWTError:
         raise HTTPException(status_code=401, detail="Invalid token")
 
-
+def verify_jwt_token(token: str) -> bool:
+    try:
+        payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
+        return True
+    except JWTError:
+        return False
 

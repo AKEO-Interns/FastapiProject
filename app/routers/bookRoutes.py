@@ -24,7 +24,7 @@ def add_book(book: BookCreate, db: Session = Depends(get_db)):
 
 @router.get("/", response_model=list[BookResponse])
 def list_books(
-    current_user: str = Depends(get_current_user),  # 🔐 JWT check
+    current_user: str = Depends(get_current_user),  # JWT check
     db: Session = Depends(get_db)
 ):
     return get_all_books(db)
