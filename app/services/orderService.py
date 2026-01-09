@@ -1,7 +1,7 @@
 from app.models.order import Order
 from app.database.db import SessionLocal
 
-def create_order(user_id: int, book_id: int):
+def create_order(user_id: str, book_id: int):
     db = SessionLocal()
     order = Order(user_id=user_id, book_id=book_id)
     db.add(order)

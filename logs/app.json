@@ -1,0 +1,148 @@
+{
+    "text": "2026-01-09 18:12:04.890 | INFO     | app.routers.bookRoutes:list_books:31 - current user %s\n",
+    "record": {
+        "elapsed": {
+            "repr": "0:01:07.832244",
+            "seconds": 67.832244
+        },
+        "exception": null,
+        "extra": {},
+        "file": {
+            "name": "bookRoutes.py",
+            "path": "D:\\bookstore\\app\\routers\\bookRoutes.py"
+        },
+        "function": "list_books",
+        "level": {
+            "icon": "ℹ️",
+            "name": "INFO",
+            "no": 20
+        },
+        "line": 31,
+        "message": "current user %s",
+        "module": "bookRoutes",
+        "name": "app.routers.bookRoutes",
+        "process": {
+            "id": 20992,
+            "name": "SpawnProcess-744"
+        },
+        "thread": {
+            "id": 14888,
+            "name": "AnyIO worker thread"
+        },
+        "time": {
+            "repr": "2026-01-09 18:12:04.890243+05:30",
+            "timestamp": 1767962524.890243
+        }
+    }
+}
+{
+    "text": "2026-01-09 18:16:37.374 | INFO     | app.routers.bookRoutes:list_books:31 - current user:\n",
+    "record": {
+        "elapsed": {
+            "repr": "0:00:06.342176",
+            "seconds": 6.342176
+        },
+        "exception": null,
+        "extra": {},
+        "file": {
+            "name": "bookRoutes.py",
+            "path": "D:\\bookstore\\app\\routers\\bookRoutes.py"
+        },
+        "function": "list_books",
+        "level": {
+            "icon": "ℹ️",
+            "name": "INFO",
+            "no": 20
+        },
+        "line": 31,
+        "message": "current user:",
+        "module": "bookRoutes",
+        "name": "app.routers.bookRoutes",
+        "process": {
+            "id": 13796,
+            "name": "SpawnProcess-746"
+        },
+        "thread": {
+            "id": 21424,
+            "name": "AnyIO worker thread"
+        },
+        "time": {
+            "repr": "2026-01-09 18:16:37.374016+05:30",
+            "timestamp": 1767962797.374016
+        }
+    }
+}
+{
+    "text": "2026-01-09 18:17:57.003 | INFO     | app.routers.bookRoutes:list_books:31 - current user:\n",
+    "record": {
+        "elapsed": {
+            "repr": "0:00:07.345193",
+            "seconds": 7.345193
+        },
+        "exception": null,
+        "extra": {},
+        "file": {
+            "name": "bookRoutes.py",
+            "path": "D:\\bookstore\\app\\routers\\bookRoutes.py"
+        },
+        "function": "list_books",
+        "level": {
+            "icon": "ℹ️",
+            "name": "INFO",
+            "no": 20
+        },
+        "line": 31,
+        "message": "current user:",
+        "module": "bookRoutes",
+        "name": "app.routers.bookRoutes",
+        "process": {
+            "id": 12824,
+            "name": "SpawnProcess-747"
+        },
+        "thread": {
+            "id": 25320,
+            "name": "AnyIO worker thread"
+        },
+        "time": {
+            "repr": "2026-01-09 18:17:57.003150+05:30",
+            "timestamp": 1767962877.00315
+        }
+    }
+}
+{
+    "text": "2026-01-09 18:19:32.331 | INFO     | app.routers.bookRoutes:list_books:31 - current user: john\n",
+    "record": {
+        "elapsed": {
+            "repr": "0:00:27.566095",
+            "seconds": 27.566095
+        },
+        "exception": null,
+        "extra": {},
+        "file": {
+            "name": "bookRoutes.py",
+            "path": "D:\\bookstore\\app\\routers\\bookRoutes.py"
+        },
+        "function": "list_books",
+        "level": {
+            "icon": "ℹ️",
+            "name": "INFO",
+            "no": 20
+        },
+        "line": 31,
+        "message": "current user: john",
+        "module": "bookRoutes",
+        "name": "app.routers.bookRoutes",
+        "process": {
+            "id": 24212,
+            "name": "SpawnProcess-751"
+        },
+        "thread": {
+            "id": 23172,
+            "name": "AnyIO worker thread"
+        },
+        "time": {
+            "repr": "2026-01-09 18:19:32.331972+05:30",
+            "timestamp": 1767962972.331972
+        }
+    }
+}

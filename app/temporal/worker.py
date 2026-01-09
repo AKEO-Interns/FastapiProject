@@ -8,6 +8,12 @@ from app.temporal.activities import (
     verify_user_activity,
     check_inventory_activity,
     create_order_activity,
+    apply_discount_activity,
+    premium_offer_activity,
+    regular_offer_activity,
+    basic_offer_activity,
+    end_activity
+  
 )
 
 async def main():
@@ -24,6 +30,11 @@ async def main():
             verify_user_activity,
             check_inventory_activity,
             create_order_activity,
+            apply_discount_activity,
+            premium_offer_activity,
+            regular_offer_activity,
+            basic_offer_activity,
+            end_activity   
         ],
     )
 

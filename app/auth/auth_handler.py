@@ -53,7 +53,7 @@ def get_current_user(
 def verify_jwt_token(token: str) -> bool:
     try:
         payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
-        return True
+        return True 
     except JWTError:
         return False
 

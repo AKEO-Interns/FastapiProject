@@ -4,6 +4,7 @@ from app.database.db import SessionLocal
 from app.schemas.bookSchema import BookCreate, BookResponse
 from app.services.bookService import create_book, get_all_books
 from app.auth.auth_handler import get_current_user
+from app.loggerConfig.logger_config import logger
 
 router = APIRouter(
     prefix="/books",
@@ -27,5 +28,6 @@ def list_books(
     current_user: str = Depends(get_current_user),  # JWT check
     db: Session = Depends(get_db)
 ):
+    logger.info(f"current user: {current_user}")
     return get_all_books(db)
 

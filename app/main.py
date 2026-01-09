@@ -6,6 +6,8 @@ from app.routers import order
 from app.database.base import Base
 from app.database.db import engine
 
+
+
 # Create tables
 Base.metadata.create_all(bind=engine)
 

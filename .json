@@ -1,0 +1,148 @@
+{
+  "steps": [
+    {
+      "id": "verifyUser",
+      "name": "verify_user_activity",
+      "type": "activity",
+      "isStartNode": true,
+      "nextNodeId": "checkInventory",
+      "inputs": {
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqb2huIiwiZXhwIjoxNzY3OTQ0NTAxfQ.YIrLfZDKrwVgmMUqNP1Zi6523aesV68FBQ2E338SbT4"
+      },
+      "outputs": {},
+      "background": false
+    },
+    {
+      "id": "checkInventory",
+      "name": "check_inventory_activity",
+      "type": "activity",
+      "isStartNode": false,
+      "nextNodeId": "inventoryCondition",
+      "inputs": {
+        "book_id": 4
+      },
+      "outputs": {},
+      "background": false
+    },
+    {
+      "id": "inventoryCondition",
+      "name": "inventory_condition",
+      "type": "condition",
+      "isStartNode": false,
+      "nextNodeId": "",
+      "condition": {
+        "expression": "{{checkInventory.available}} == True",
+        "on_true": "createOrder",
+        "on_false": "endWorkflow"
+      }
+    },
+    {
+      "id": "createOrder",
+      "name": "create_order_activity",
+      "type": "activity",
+      "isStartNode": false,
+      "nextNodeId": "switchOffer",
+      "inputs": {
+        "user_id": "{{verifyUser.user_id}}",
+        "book_id": "{{checkInventory.book_id}}"
+      },
+      "outputs": {},
+      "background": false
+    },
+    {
+      "id": "switchOffer",
+      "name": "offer_switch",
+      "type": "switch",
+      "isStartNode": false,
+      "nextNodeId": "",
+      "switch": {
+        "item": "{{checkInventory.book_id}}",
+        "cases": [
+          {
+            "condition": "value == 1",
+            "next_node_id": "premiumOffer",
+            "is_default": false
+          },
+          {
+            "is_default": true,
+            "next_node_id": "basicOffer"
+          }
+        ]
+      }
+    },
+    {
+      "id": "premiumOffer",
+      "name": "premium_offer_activity",
+      "type": "activity",
+      "isStartNode": false,
+      "nextNodeId": "discountLoop",
+      "inputs": {
+        "order_id": "{{createOrder.order_id}}"
+      },
+      "outputs": {},
+      "background": false
+    },
+    {
+      "id": "basicOffer",
+      "name": "basic_offer_activity",
+      "type": "activity",
+      "isStartNode": false,
+      "nextNodeId": "discountLoop",
+      "inputs": {
+        "order_id": "{{createOrder.order_id}}"
+      },
+      "outputs": {},
+      "background": false
+    },
+      {
+      "id": "discountLoop",
+      "name": "discount_loop",
+      "type": "loop",
+      "isStartNode": false,
+      "nextNodeId": "paymentWorkflow",
+      "loop": {
+        "iterator": "i",
+        "start": 0,
+        "end": 3,
+        "step": 1,
+        "activity_node_id": "applyDiscount"
+      }
+    },
+    {
+      "id": "applyDiscount",
+      "name": "apply_discount_activity",
+      "type": "activity",
+      "isStartNode": false,
+      "nextNodeId": "",
+      "inputs": {
+        "order_id": "{{createOrder.order_id}}",
+        "iteration": "{{i}}"
+      },
+      "outputs": {},
+      "background": false
+    },
+    {
+      "id": "endWorkflow",
+      "name": "end_activity",
+      "type": "activity",
+      "isStartNode": false,
+      "nextNodeId": "switchOffer",
+      "inputs": {},
+      "outputs": {},
+      "background": false
+    },
+    {
+     "id": "paymentWorkflow",
+     "name": "child_workflow",
+     "type": "workflow",
+     "isStartNode": false,
+     "nextNodeId": "",
+     "inputs": {
+    "order_id": "{{createOrder.order_id}}"
+     },
+      "outputs": {},
+      "background": false
+    }
+
+  ]
+}
