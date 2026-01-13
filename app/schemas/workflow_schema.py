@@ -1,20 +1,4 @@
-# from pydantic import BaseModel
-# from typing import Any, Dict, List, Optional, Literal
 
-# class StepNode(BaseModel):
-#     name: str
-#     type: Literal["activity", "workflow", "condition", "loop", "switch"] = "activity"
-#     inputs: Dict[str, Any] | Any = {}
-#     outputs:Dict [str, Any] | Any = {}
-#     background: Optional[bool] = False
-#     condition: Optional[str] = None            # for condition nodes
-#     loop_over: Optional[List[Any]] = None      # for loop nodes
-#     steps: Optional[List["StepNode"]] = None   # child steps
-#     switch_on: Optional[str] = None            # for switch nodes
-#     cases: Optional[Dict[str, List["StepNode"]]] = None  # switch cases
-
-# class WorkflowPayload(BaseModel):
-#     steps: List[StepNode]
 
 from pydantic import BaseModel
 from typing import Any, Dict, List, Optional, Literal
@@ -24,16 +8,16 @@ from typing import Any, Dict, List, Optional, Literal
 # CONDITION NODE CONFIG
 # -----------------------------
 class ConditionConfig(BaseModel):
-    expression: str          # e.g. "{{checkInventory.available}} == True"
-    on_true: str             # next node id
-    on_false: str            # next node id
+    expression: str          
+    on_true: str             
+    on_false: str           
 
 
 # -----------------------------
 # LOOP NODE CONFIG
 # -----------------------------
 class LoopConfig(BaseModel):
-    iterator: str            # e.g. "i"
+    iterator: str            
     start: int
     end: int
     step: int = 1
@@ -50,7 +34,7 @@ class SwitchCase(BaseModel):
 
 
 class SwitchConfig(BaseModel):
-    item: str                       # e.g. "{{checkInventory.book_id}}"
+    item: str                       
     cases: List[SwitchCase]
 
 
@@ -77,7 +61,10 @@ class StepNode(BaseModel):
 # WORKFLOW PAYLOAD
 # -----------------------------
 class WorkflowPayload(BaseModel):
+    allBackgroundRun: bool = False
     steps: List[StepNode]
+
+    # background
 
 
 

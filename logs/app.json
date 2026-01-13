@@ -145,4 +145,340 @@
             "timestamp": 1767962972.331972
         }
     }
+}{
+    "text": "2026-01-11 11:29:33.010 | INFO     | app.routers.paymentRoutes:createPayment:13 - create payment route\n",
+    "record": {
+        "elapsed": {
+            "repr": "0:01:09.529559",
+            "seconds": 69.529559
+        },
+        "exception": null,
+        "extra": {},
+        "file": {
+            "name": "paymentRoutes.py",
+            "path": "D:\\bookstore\\app\\routers\\paymentRoutes.py"
+        },
+        "function": "createPayment",
+        "level": {
+            "icon": "ℹ️",
+            "name": "INFO",
+            "no": 20
+        },
+        "line": 13,
+        "message": "create payment route",
+        "module": "paymentRoutes",
+        "name": "app.routers.paymentRoutes",
+        "process": {
+            "id": 12580,
+            "name": "SpawnProcess-23"
+        },
+        "thread": {
+            "id": 5800,
+            "name": "AnyIO worker thread"
+        },
+        "time": {
+            "repr": "2026-01-11 11:29:33.010770+05:30",
+            "timestamp": 1768111173.01077
+        }
+    }
+}{
+    "text": "2026-01-11 11:35:31.326 | INFO     | app.routers.paymentRoutes:createPayment:13 - create payment route\n",
+    "record": {
+        "elapsed": {
+            "repr": "0:00:36.433649",
+            "seconds": 36.433649
+        },
+        "exception": null,
+        "extra": {},
+        "file": {
+            "name": "paymentRoutes.py",
+            "path": "D:\\bookstore\\app\\routers\\paymentRoutes.py"
+        },
+        "function": "createPayment",
+        "level": {
+            "icon": "ℹ️",
+            "name": "INFO",
+            "no": 20
+        },
+        "line": 13,
+        "message": "create payment route",
+        "module": "paymentRoutes",
+        "name": "app.routers.paymentRoutes",
+        "process": {
+            "id": 10080,
+            "name": "SpawnProcess-59"
+        },
+        "thread": {
+            "id": 5700,
+            "name": "AnyIO worker thread"
+        },
+        "time": {
+            "repr": "2026-01-11 11:35:31.326167+05:30",
+            "timestamp": 1768111531.326167
+        }
+    }
 }
+{
+    "text": "2026-01-11 11:36:59.886 | INFO     | app.routers.paymentRoutes:createPayment:15 - create payment route\n",
+    "record": {
+        "elapsed": {
+            "repr": "0:00:12.858809",
+            "seconds": 12.858809
+        },
+        "exception": null,
+        "extra": {},
+        "file": {
+            "name": "paymentRoutes.py",
+            "path": "D:\\bookstore\\app\\routers\\paymentRoutes.py"
+        },
+        "function": "createPayment",
+        "level": {
+            "icon": "ℹ️",
+            "name": "INFO",
+            "no": 20
+        },
+        "line": 15,
+        "message": "create payment route",
+        "module": "paymentRoutes",
+        "name": "app.routers.paymentRoutes",
+        "process": {
+            "id": 12732,
+            "name": "SpawnProcess-64"
+        },
+        "thread": {
+            "id": 15260,
+            "name": "AnyIO worker thread"
+        },
+        "time": {
+            "repr": "2026-01-11 11:36:59.886457+05:30",
+            "timestamp": 1768111619.886457
+        }
+    }
+}
+{
+    "text": "2026-01-11 21:42:12.558 | INFO     | app.routers.paymentRoutes:createPayment:17 - create payment route\n",
+    "record": {
+        "elapsed": {
+            "repr": "0:02:33.234684",
+            "seconds": 153.234684
+        },
+        "exception": null,
+        "extra": {},
+        "file": {
+            "name": "paymentRoutes.py",
+            "path": "D:\\bookstore\\app\\routers\\paymentRoutes.py"
+        },
+        "function": "createPayment",
+        "level": {
+            "icon": "ℹ️",
+            "name": "INFO",
+            "no": 20
+        },
+        "line": 17,
+        "message": "create payment route",
+        "module": "paymentRoutes",
+        "name": "app.routers.paymentRoutes",
+        "process": {
+            "id": 11472,
+            "name": "SpawnProcess-1"
+        },
+        "thread": {
+            "id": 14552,
+            "name": "AnyIO worker thread"
+        },
+        "time": {
+            "repr": "2026-01-11 21:42:12.558787+05:30",
+            "timestamp": 1768147932.558787
+        }
+    }
+}
+{
+    "text": "2026-01-11 21:46:35.518 | INFO     | app.routers.paymentRoutes:createPayment:17 - create payment route\n",
+    "record": {
+        "elapsed": {
+            "repr": "0:01:44.829417",
+            "seconds": 104.829417
+        },
+        "exception": null,
+        "extra": {},
+        "file": {
+            "name": "paymentRoutes.py",
+            "path": "D:\\bookstore\\app\\routers\\paymentRoutes.py"
+        },
+        "function": "createPayment",
+        "level": {
+            "icon": "ℹ️",
+            "name": "INFO",
+            "no": 20
+        },
+        "line": 17,
+        "message": "create payment route",
+        "module": "paymentRoutes",
+        "name": "app.routers.paymentRoutes",
+        "process": {
+            "id": 5004,
+            "name": "SpawnProcess-1"
+        },
+        "thread": {
+            "id": 18528,
+            "name": "AnyIO worker thread"
+        },
+        "time": {
+            "repr": "2026-01-11 21:46:35.518039+05:30",
+            "timestamp": 1768148195.518039
+        }
+    }
+}
+{
+    "text": "2026-01-11 21:49:58.455 | INFO     | app.routers.paymentRoutes:createPayment:17 - create payment route\n",
+    "record": {
+        "elapsed": {
+            "repr": "0:01:36.485301",
+            "seconds": 96.485301
+        },
+        "exception": null,
+        "extra": {},
+        "file": {
+            "name": "paymentRoutes.py",
+            "path": "D:\\bookstore\\app\\routers\\paymentRoutes.py"
+        },
+        "function": "createPayment",
+        "level": {
+            "icon": "ℹ️",
+            "name": "INFO",
+            "no": 20
+        },
+        "line": 17,
+        "message": "create payment route",
+        "module": "paymentRoutes",
+        "name": "app.routers.paymentRoutes",
+        "process": {
+            "id": 4796,
+            "name": "SpawnProcess-1"
+        },
+        "thread": {
+            "id": 19724,
+            "name": "AnyIO worker thread"
+        },
+        "time": {
+            "repr": "2026-01-11 21:49:58.455101+05:30",
+            "timestamp": 1768148398.455101
+        }
+    }
+}
+{
+    "text": "2026-01-12 10:03:39.010 | INFO     | app.routers.bookRoutes:list_books:31 - current user: john\n",
+    "record": {
+        "elapsed": {
+            "repr": "0:13:37.726970",
+            "seconds": 817.72697
+        },
+        "exception": null,
+        "extra": {},
+        "file": {
+            "name": "bookRoutes.py",
+            "path": "D:\\bookstore\\app\\routers\\bookRoutes.py"
+        },
+        "function": "list_books",
+        "level": {
+            "icon": "ℹ️",
+            "name": "INFO",
+            "no": 20
+        },
+        "line": 31,
+        "message": "current user: john",
+        "module": "bookRoutes",
+        "name": "app.routers.bookRoutes",
+        "process": {
+            "id": 5260,
+            "name": "SpawnProcess-1"
+        },
+        "thread": {
+            "id": 11256,
+            "name": "AnyIO worker thread"
+        },
+        "time": {
+            "repr": "2026-01-12 10:03:39.010101+05:30",
+            "timestamp": 1768192419.010101
+        }
+    }
+}{
+    "text": "2026-01-12 16:40:11.301 | INFO     | app.loggerConfig.logger_config:log:120 - {\"message\": \"Book created successfully\", \"service\": \"bookService\", \"data\": {\"id\": 2, \"title\": \"codeReview\", \"author\": \"Diomidis Spinellis \"}}\n",
+    "record": {
+        "elapsed": {
+            "repr": "0:05:33.841380",
+            "seconds": 333.84138
+        },
+        "exception": null,
+        "extra": {},
+        "file": {
+            "name": "logger_config.py",
+            "path": "D:\\bookstore\\app\\loggerConfig\\logger_config.py"
+        },
+        "function": "log",
+        "level": {
+            "icon": "ℹ️",
+            "name": "INFO",
+            "no": 20
+        },
+        "line": 120,
+        "message": "{\"message\": \"Book created successfully\", \"service\": \"bookService\", \"data\": {\"id\": 2, \"title\": \"codeReview\", \"author\": \"Diomidis Spinellis \"}}",
+        "module": "logger_config",
+        "name": "app.loggerConfig.logger_config",
+        "process": {
+            "id": 11116,
+            "name": "SpawnProcess-196"
+        },
+        "thread": {
+            "id": 332,
+            "name": "AnyIO worker thread"
+        },
+        "time": {
+            "repr": "2026-01-12 16:40:11.301856+05:30",
+            "timestamp": 1768216211.301856
+        }
+    }
+}{
+    "text": "2026-01-12 16:49:27.369 | INFO     | app.loggerConfig.logger_config:log:120 - {\"message\": \"Book created successfully\", \"service\": \"bookService\", \"data\": {\"id\": 3, \"title\": \"software Development\", \"author\": \"Dave Thomas\"}}\n",
+    "record": {
+        "elapsed": {
+            "repr": "0:01:41.757112",
+            "seconds": 101.757112
+        },
+        "exception": null,
+        "extra": {},
+        "file": {
+            "name": "logger_config.py",
+            "path": "D:\\bookstore\\app\\loggerConfig\\logger_config.py"
+        },
+        "function": "log",
+        "level": {
+            "icon": "ℹ️",
+            "name": "INFO",
+            "no": 20
+        },
+        "line": 120,
+        "message": "{\"message\": \"Book created successfully\", \"service\": \"bookService\", \"data\": {\"id\": 3, \"title\": \"software Development\", \"author\": \"Dave Thomas\"}}",
+        "module": "logger_config",
+        "name": "app.loggerConfig.logger_config",
+        "process": {
+            "id": 22232,
+            "name": "SpawnProcess-198"
+        },
+        "thread": {
+            "id": 22480,
+            "name": "AnyIO worker thread"
+        },
+        "time": {
+            "repr": "2026-01-12 16:49:27.369738+05:30",
+            "timestamp": 1768216767.369738
+        }
+    }
+}{"text": "2026-01-13 10:53:29.515 | INFO     | app.routers.bookRoutes:list_books:31 - current user: 2\n", "record": {"elapsed": {"repr": "0:01:33.480993", "seconds": 93.480993}, "exception": null, "extra": {}, "file": {"name": "bookRoutes.py", "path": "D:\\bookstore\\app\\routers\\bookRoutes.py"}, "function": "list_books", "level": {"icon": "ℹ️", "name": "INFO", "no": 20}, "line": 31, "message": "current user: 2", "module": "bookRoutes", "name": "app.routers.bookRoutes", "process": {"id": 19628, "name": "SpawnProcess-265"}, "thread": {"id": 11608, "name": "AnyIO worker thread"}, "time": {"repr": "2026-01-13 10:53:29.515144+05:30", "timestamp": 1768281809.515144}}}
+{"text": "2026-01-13 11:30:59.046 | INFO     | app.routers.bookRoutes:list_books:31 - current user: 1\n", "record": {"elapsed": {"repr": "0:02:01.156271", "seconds": 121.156271}, "exception": null, "extra": {}, "file": {"name": "bookRoutes.py", "path": "D:\\bookstore\\app\\routers\\bookRoutes.py"}, "function": "list_books", "level": {"icon": "ℹ️", "name": "INFO", "no": 20}, "line": 31, "message": "current user: 1", "module": "bookRoutes", "name": "app.routers.bookRoutes", "process": {"id": 15656, "name": "SpawnProcess-40"}, "thread": {"id": 24412, "name": "AnyIO worker thread"}, "time": {"repr": "2026-01-13 11:30:59.046343+05:30", "timestamp": 1768284059.046343}}}
+{"text": "2026-01-13 12:18:21.849 | INFO     | app.loggerConfig.logger_config:log:120 - {\"message\": \"Book created successfully\", \"service\": \"bookService\", \"data\": {\"id\": 1, \"title\": \"clean code\", \"author\": \"robert c martin\"}}\n", "record": {"elapsed": {"repr": "0:00:04.951696", "seconds": 4.951696}, "exception": null, "extra": {}, "file": {"name": "logger_config.py", "path": "D:\\bookstore\\app\\loggerConfig\\logger_config.py"}, "function": "log", "level": {"icon": "ℹ️", "name": "INFO", "no": 20}, "line": 120, "message": "{\"message\": \"Book created successfully\", \"service\": \"bookService\", \"data\": {\"id\": 1, \"title\": \"clean code\", \"author\": \"robert c martin\"}}", "module": "logger_config", "name": "app.loggerConfig.logger_config", "process": {"id": 25624, "name": "SpawnProcess-97"}, "thread": {"id": 20188, "name": "AnyIO worker thread"}, "time": {"repr": "2026-01-13 12:18:21.849568+05:30", "timestamp": 1768286901.849568}}}
+{"text": "2026-01-13 12:33:48.759 | INFO     | app.routers.bookRoutes:list_books:31 - current user: 2\n", "record": {"elapsed": {"repr": "0:01:26.158487", "seconds": 86.158487}, "exception": null, "extra": {}, "file": {"name": "bookRoutes.py", "path": "D:\\bookstore\\app\\routers\\bookRoutes.py"}, "function": "list_books", "level": {"icon": "ℹ️", "name": "INFO", "no": 20}, "line": 31, "message": "current user: 2", "module": "bookRoutes", "name": "app.routers.bookRoutes", "process": {"id": 2108, "name": "SpawnProcess-106"}, "thread": {"id": 7012, "name": "AnyIO worker thread"}, "time": {"repr": "2026-01-13 12:33:48.759329+05:30", "timestamp": 1768287828.759329}}}
+{"text": "2026-01-13 12:44:55.382 | INFO     | app.routers.bookRoutes:list_books:31 - current user: 2\n", "record": {"elapsed": {"repr": "0:00:12.059354", "seconds": 12.059354}, "exception": null, "extra": {}, "file": {"name": "bookRoutes.py", "path": "D:\\bookstore\\app\\routers\\bookRoutes.py"}, "function": "list_books", "level": {"icon": "ℹ️", "name": "INFO", "no": 20}, "line": 31, "message": "current user: 2", "module": "bookRoutes", "name": "app.routers.bookRoutes", "process": {"id": 18292, "name": "SpawnProcess-124"}, "thread": {"id": 20492, "name": "AnyIO worker thread"}, "time": {"repr": "2026-01-13 12:44:55.382701+05:30", "timestamp": 1768288495.382701}}}
+{"text": "2026-01-13 12:45:33.701 | INFO     | app.routers.bookRoutes:list_books:31 - current user: 2\n", "record": {"elapsed": {"repr": "0:00:50.377677", "seconds": 50.377677}, "exception": null, "extra": {}, "file": {"name": "bookRoutes.py", "path": "D:\\bookstore\\app\\routers\\bookRoutes.py"}, "function": "list_books", "level": {"icon": "ℹ️", "name": "INFO", "no": 20}, "line": 31, "message": "current user: 2", "module": "bookRoutes", "name": "app.routers.bookRoutes", "process": {"id": 18292, "name": "SpawnProcess-124"}, "thread": {"id": 20492, "name": "AnyIO worker thread"}, "time": {"repr": "2026-01-13 12:45:33.701024+05:30", "timestamp": 1768288533.701024}}}
+{"text": "2026-01-13 13:00:15.534 | INFO     | app.routers.bookRoutes:list_books:31 - current user: 2\n", "record": {"elapsed": {"repr": "0:00:30.569014", "seconds": 30.569014}, "exception": null, "extra": {}, "file": {"name": "bookRoutes.py", "path": "D:\\bookstore\\app\\routers\\bookRoutes.py"}, "function": "list_books", "level": {"icon": "ℹ️", "name": "INFO", "no": 20}, "line": 31, "message": "current user: 2", "module": "bookRoutes", "name": "app.routers.bookRoutes", "process": {"id": 24532, "name": "SpawnProcess-160"}, "thread": {"id": 7384, "name": "AnyIO worker thread"}, "time": {"repr": "2026-01-13 13:00:15.534393+05:30", "timestamp": 1768289415.534393}}}
+{"text": "2026-01-13 13:01:39.583 | INFO     | app.routers.bookRoutes:list_books:31 - current user: 2\n", "record": {"elapsed": {"repr": "0:00:10.193970", "seconds": 10.19397}, "exception": null, "extra": {}, "file": {"name": "bookRoutes.py", "path": "D:\\bookstore\\app\\routers\\bookRoutes.py"}, "function": "list_books", "level": {"icon": "ℹ️", "name": "INFO", "no": 20}, "line": 31, "message": "current user: 2", "module": "bookRoutes", "name": "app.routers.bookRoutes", "process": {"id": 13360, "name": "SpawnProcess-165"}, "thread": {"id": 21692, "name": "AnyIO worker thread"}, "time": {"repr": "2026-01-13 13:01:39.583827+05:30", "timestamp": 1768289499.583827}}}

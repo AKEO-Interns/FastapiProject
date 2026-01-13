@@ -1,74 +1,58 @@
-# import logging
-# import logging.config
 
-# LOG_FORMAT = (
-#     "%(asctime)s | %(levelname)s | %(name)s | "
-#     "%(filename)s:%(lineno)d | %(message)s"
-# )
 
-# LOGGING_CONFIG = {
-#     "version": 1,
-#     "disable_existing_loggers": False,
-
-#     "formatters": {
-#         "default": {
-#             "format": LOG_FORMAT
-#         },
-#     },
-
-#     "handlers": {
-#         "console": {
-#             "class": "logging.StreamHandler",
-#             "formatter": "default",
-#         },
-#         "file": {
-#             "class": "logging.handlers.RotatingFileHandler",
-#             "filename": "logs/app.log",
-#             "maxBytes": 10_000_000,
-#             "backupCount": 5,
-#             "formatter": "default",
-#         },
-#     },
-
-#     "root": {
-#         "level": "INFO",
-#         "handlers": ["console", "file"],
-#     },
-# }
-
-# def setup_logging():
-#     logging.config.dictConfig(LOGGING_CONFIG)
-
-# logger_config.py
 from loguru import logger
 import sys
+import json
+from typing import Any, Dict, Optional
 
-# Remove default logger (optional)
-logger.remove()
+class LoggerService:
+    def __init__(self, service: str ):
 
-# Console logs
-logger.add(
-    sys.stdout, 
-    level="INFO",
-    format="<green>{time:YYYY-MM-DD HH:mm:ss}</green> | <level>{level}</level> | {message}",
-)
+        self.logger = logger
+        self.service = service
+
+        # Remove default handlers to avoid duplicate logs
+        logger.remove()
+        # Add a console handler
+        logger.add(
+            sys.stdout,
+            format="{time:YYYY-MM-DD HH:mm:ss} | {level} | {message}",
+            level="INFO",
+            enqueue=False,
+            backtrace=True,
+            diagnose=True
+        )
+
+        logger.add(
+            "logs/app.json",
+            level="INFO",
+            rotation="5 MB",       
+            retention="10 days",   
+            compression="zip",     # compress old files
+            serialize=True         
+        )
 
 
-logger.add(
-    "logs/app.json",
-    level="DEBUG",
-    rotation="5 MB",       
-    retention="10 days",   
-    compression="zip",     # compress old files
-    serialize=True         
-)
+    def log(self, level: str, message: str, data: Optional[Dict[str, Any]] = None):
+      
+        log_entry = {"message": message, "service": self.service}
+        if data:
+            log_entry["data"] = data
 
+        # Convert to JSON for consistency
+        log_text = json.dumps(log_entry, default=str)
 
-logger.add(
-    "logs/error.log",
-    level="ERROR",
-    filter=lambda record: record["level"].name == "ERROR",
-    format="{time:YYYY-MM-DD HH:mm:ss} | {level} | {message}"
-)
+        # Route to correct log level
+        level = level.lower()
+        if level == "info":
+            self.logger.info(log_text)
+        elif level == "warning":
+            self.logger.warning(log_text)
+        elif level == "error":
+            self.logger.error(log_text)
+        elif level == "debug":
+            self.logger.debug(log_text)
+        else:
+            self.logger.info(log_text)
 
-
+      

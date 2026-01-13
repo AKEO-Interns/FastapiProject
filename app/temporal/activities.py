@@ -3,15 +3,15 @@ from app.database.db import SessionLocal
 from app.services.bookService import get_all_books
 from app.services.orderService import create_order
 from temporalio.exceptions import ApplicationError
-
+from app.auth.auth_handler import auth
 @activity.defn
 async def verify_user_activity(data: dict):
-    from app.auth.auth_handler import verify_jwt_token
+   
 
     token = data["token"]
 
     #  extract user_id FROM TOKEN (not payload)
-    payload = verify_jwt_token(token)
+    payload = auth.verify_jwt_token(token)
     if not payload:
         raise Exception("Invalid JWT")
 
@@ -28,32 +28,31 @@ async def check_inventory_activity(data: dict):
     print(book_id)
     db = SessionLocal()
     try:
-        books = get_all_books(db)
+        books = get_all_books(db) 
+        print(books)  # saari books fetch ho rahi hain
         for book in books:
-            if book.id == book_id:
-                return {"available":True, "book_id": book_id}  # <-- include book_id
-            return {"available": False, "book_id": book_id}
-        raise ApplicationError(
-            "Book not available",
-            type="BOOK_OUT_OF_STOCK",
-            non_retryable=True
-        )
+            if book.id == book_id:  # agar match mil gaya
+                return {"available": True, "book_id": book_id}
+      
+        return {"available": False, "book_id": book_id}
     finally:
         db.close()
 
 
+
 @activity.defn
 async def create_order_activity(data: dict):
-    print("DEBUG create_order_activity data:", data, type(data["user_id"]))
+    
     order = create_order(data["user_id"], data["book_id"])
     return {"order_id": order.id}
 
 @activity.defn
-async def apply_discount_activity(order:dict, iteration: int = 0):
+async def apply_discount_activity(order:dict):
     """
     Applies discount in loop
     """
     order_id= order["order_id"]
+    iteration = order.get("iteration", 0)
     print("apply discount :",order_id)
     discount = 5 * (iteration + 1)
 

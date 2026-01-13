@@ -7,7 +7,10 @@ class BookCreate(BaseModel):
 
 class BookResponse(BookCreate):
     id: int
+    title: str
+    author: str
+    price: float
 
-    model_config = {
-        "from_attributes": True
-    }
+    # model_config = {
+    #     "from_attributes": True
+    # }

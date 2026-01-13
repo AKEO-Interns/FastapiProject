@@ -1,14 +1,14 @@
 # # activity_strategy.py
 from app.temporal.step_strategy import StepStrategy
-
+from temporalio import workflow
+from datetime import timedelta
 class ActivityStrategy(StepStrategy):
 
     async def execute(self, workflow_ctx, step, context, **kwargs):
         resolved_inputs = workflow_ctx._resolve_inputs(step.inputs, context)
 
         # Example: Replace with Temporal activity execution
-        from temporalio import workflow
-        from datetime import timedelta
+
 
         if step.background:
             workflow.start_activity(

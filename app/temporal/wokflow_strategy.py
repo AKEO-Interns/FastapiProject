@@ -1,26 +1,4 @@
-# workflow_strategy.py
-# from temporalio import workflow
-# from app.temporal.child_workflow import PaymentWorkflow
-# from app.temporal.step_strategy import StepStrategy
 
-# class WorkflowStrategy(StepStrategy):
-#     async def execute(self, step, context, run_func=None):
-#         resolved_inputs = step.resolve_inputs(context)
-
-#         if step.background:
-#             workflow.start_child_workflow(
-#                 step.name,
-#                 resolved_inputs,
-#                 workflow_class=PaymentWorkflow
-#             )
-#             return None
-#         else:
-#             result = await workflow.execute_child_workflow(
-#                 PaymentWorkflow,
-#                 resolved_inputs
-#             )
-#             context[step.id] = result
-#             return result
 
 from temporalio import workflow
 from app.temporal.child_workflow import PaymentWorkflow

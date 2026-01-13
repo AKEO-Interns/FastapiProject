@@ -23,7 +23,7 @@ class LoopStrategy(StepStrategy):
             )
 
         for val in range(loop.start, loop.end, loop.step):
-            print("🔁 LOOP ITERATION:", val)
+          
 
             # set iterator in SAME context
             context[loop.iterator] = val
