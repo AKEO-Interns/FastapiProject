@@ -75,8 +75,8 @@ class AuthService:
                 raise HTTPException(status_code=401, detail="Invalid token")
                 
             user_id = int(user_id)
-            current_user_ctx.set(user_id)
-            print( "get current user for list:",current_user_ctx.get())
+           
+    
             return user_id
 
         except JWTError:

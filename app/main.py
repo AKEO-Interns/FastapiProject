@@ -6,7 +6,9 @@ from app.routers import order
 from app.routers import paymentRoutes
 from app.database.base import Base
 from app.database.db import engine
-from app.database.event import event
+from app.database.event import set_audit_fields
+
+
 
 
 # Create tables

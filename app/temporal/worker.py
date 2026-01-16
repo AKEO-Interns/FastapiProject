@@ -13,7 +13,6 @@ from app.temporal.activities import (
     regular_offer_activity,
     basic_offer_activity,
     end_activity
-  
 )
 
 async def main():

@@ -1,5 +1,6 @@
 from fastapi import APIRouter, Depends
 from sqlalchemy.orm import Session
+
 from app.database.db import SessionLocal
 from app.schemas.bookSchema import BookCreate, BookResponse
 from app.services.bookService import create_book, get_all_books
@@ -11,9 +12,12 @@ router = APIRouter(
     tags=["Books"]
 )
 
+
+
 # DB dependency
 def get_db():
     db = SessionLocal()
+
     try:
         yield db
     finally:

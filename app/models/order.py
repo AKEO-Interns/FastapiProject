@@ -3,6 +3,7 @@ from sqlalchemy.sql import func
 from sqlalchemy.orm import relationship
 
 from app.database.base import Base
+from app.models import tenantBase
 from app.models.user import User       
 from app.models.book import Book    
 

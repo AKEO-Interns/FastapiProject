@@ -1,13 +1,20 @@
-from fastapi import APIRouter
+from fastapi import APIRouter, HTTPException
 from temporalio.client import Client
 from app.schemas.workflow_schema import WorkflowPayload
 from app.temporal.workflows import GenericWorkflow
+from app.validators.payload_validators import WorkflowValidator
 
 
 router = APIRouter(prefix="/workflow", tags=["Workflow"])
 
 @router.post("/start_workflow")
 async def start_workflow(payload: WorkflowPayload):
+    try:
+        WorkflowValidator.pre_validate(payload)
+    except ValueError as e:
+        # BLOCK EXECUTION
+        raise HTTPException(status_code=400, detail=str(e))
+    
     client = await Client.connect("localhost:7233")
 
     handle = await client.start_workflow(
